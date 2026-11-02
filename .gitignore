@@ -1,0 +1,22 @@
+# Secrets and keys (never commit these)
+*.pem
+*.key
+.env
+*.kubeconfig
+kubeconfig
+config
+kind-kubeconfig
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build and temp files
+node_modules/
+bin/
+obj/
+__pycache__/
+*.log
+dist/
