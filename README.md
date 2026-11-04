@@ -86,19 +86,6 @@ On every push to `main`, GitHub Actions builds the `vote`, `result` and `worker`
 
 Workflow file: `.github/workflows/main.yaml`
 
-## Screenshots
-| Voting app | Result page |
-|---|---|
-| ![vote](screenshots/vote.png) | ![result](screenshots/result.png) |
-
-| Grafana | Prometheus |
-|---|---|
-| ![grafana](screenshots/grafana.png) | ![prometheus](screenshots/prometheus.png) |
-
-| GitHub Actions (green) | Docker Hub |
-|---|---|
-| ![actions](screenshots/actions.png) | ![dockerhub](screenshots/dockerhub.png) |
-
 ## Challenges and Learnings
 1. **GitHub Actions failed at Docker Hub login.** Fixed by creating a Docker Hub access token and adding it as `DOCKERHUB_TOKEN` plus `DOCKERHUB_USERNAME` in GitHub Secrets. After re-running, all 3 builds passed.
 2. **Kind NodePorts not reachable from the EC2 IP.** Fixed by adding `extraPortMappings` in `kind-config.yaml` for ports 31000 to 31002, which map the node container ports to the host.
